@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// RESET
+// ==========================================*/
+*{-webkit-box-sizing: border-box;box-sizing: border-box;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;font-weight: normal;}
+a{outline: none;text-decoration: none;}
+li{list-style: none;}
+img{vertical-align: bottom;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+
+
+/* ============================================
+// BASE
+// ==========================================*/
+
+/*--------------------
+	html,body
+--------------------*/
+html,
+body{
+	height: 100%;
+	min-width: 1024px;
+	@include mq(sp) {
+		min-width: inherit;
+	}
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	position: relative;
+	font-family: $default-family;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: $txt-color;
+	line-height: 2;
+	letter-spacing: 0.075em;
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+	@include mq(sp) {
+		font-size: 1.4rem;
+		background-size: auto;
+	}
+}
+
+/*--------------------
+	ローディング
+--------------------*/
+#loading{
+	display: none;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999999;
+	background: #fff;
+	pointer-events: none;
+	transition: opacity 0.4s linear, transform 0.4s;
+	.js-loaded &{
+		opacity: 0;
+		transform: scale(1.5);
+		transition-delay: 0.3s;
+	}
+	.front-page.once & {
+		display: block;
+	}
+	.loading {
+		&__inner{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transform: translate(-50%,-50%);
+		}
+		&__commonLogo {
+			position: relative;
+			z-index: 2;
+		}
+		&__txt{
+			margin-top: 20px;
+			text-align: center;
+			font-size: 3.2rem;
+			font-weight: bold;
+			@include mq(sp) {
+				font-size: 2.4rem;
+				margin-top: 10px;
+			}
+			span{
+				display: inline-block;
+				letter-spacing: normal;
+				animation: text-scale 0.6s ease-in-out infinite alternate;
+				color: $primary-color;
+				transform: scale(0.5);
+				// opacity: 0;
+				// &:nth-child(4n+2){color: $secondary-color;}
+				// &:nth-child(4n+3){color: $primary-color;}
+				&:nth-child(1) {animation-delay: 0.1s;}
+				&:nth-child(2) {animation-delay: 0.2s;}
+				&:nth-child(3) {animation-delay: 0.3s;}
+				&:nth-child(4) {animation-delay: 0.4s;}
+				&:nth-child(5) {animation-delay: 0.5s;}
+				&:nth-child(6) {animation-delay: 0.6s;}
+				&:nth-child(7) {animation-delay: 0.7s;}
+				&:nth-child(8) {animation-delay: 0.8s;}
+				&:nth-child(9) {animation-delay: 0.9s;}
+				&:nth-child(10) {animation-delay: 1s;}
+				&:nth-child(11) {animation-delay: 1.1s;}
+				&:nth-child(12) {animation-delay: 1.2s;}
+				&:nth-child(13) {animation-delay: 1.3s;}
+				&:nth-child(14) {animation-delay: 1.4s;}
+				&:nth-child(15) {animation-delay: 1.5s;}
+			}
+		}
+	}
+	.commonCupList01 {
+		margin-top: 32px;
+		@include mq(sp) {
+			margin-top: -20px;
+		}
+	}
+}
+@keyframes text-scale{
+	0%{
+		// opacity: 0;
+		transform: scale(0.5);
+	}
+	100%{
+		// opacity: 1;
+		transform: scale(1.1);
+	}
+}
+
+/*--------------------
+	#container
+--------------------*/
+#container {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	opacity: 0;
+	transition: opacity 0.3s;
+
+	.js-loaded & {
+		opacity: 1;
+	}
+}
+
+/*--------------------
+	innerWrap
+--------------------*/
+.innerWrap {
+	max-width: 1280px;
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	padding: 0 40px;
+	@include mq(tab) {
+		padding: 0 50px;
+	}
+	@include mq(sp) {
+		padding: 0 20px;
+	}
+}
+
+/*--------------------
+	a
+--------------------*/
+a {
+	color: $txt-color;
+	transition: opacity $transition-time, color $transition-time;
+}
+
+/*--------------------
+	TEL
+--------------------*/
+@media (min-device-width: 769px){
+	a[href^="tel:"] {
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+/*--------------------
+	hover
+--------------------*/
+.ro:hover {
+	@include mq(hover) {
+		opacity: 0.7;
+		transition: all $transition-time;
+	}
+}
+
+/*--------------------
+	ofi
+--------------------*/
+.ofi {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/*--------------------
+	fonts
+--------------------*/
+.eng {
+	font-family: $eng;
+	letter-spacing: 0;
+}
+.mincho {font-family: $mincho;}
+
+
+/*--------------------
+	ios 角丸 回避
+--------------------*/
+input[type="button"],input[type="text"],input[type="submit"],input[type="image"],input[type="search"],textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+/*--------------------
+	PC SPのみ
+--------------------*/
+.u-pcOnly {
+	@include mq(sp) {
+		display: none !important;
+	}
+}
+.u-pcUpOnly {
+	@include mq(tab) {
+		display: none !important;
+	}
+}
+.u-spOnly {
+	@include mq(pc) {
+		display: none !important;
+	}
+}
