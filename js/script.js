@@ -1,11 +1,6 @@
 (function($) {
 
 	/*-------------------------------
-		objectFitImages
-	-------------------------------*/
-	objectFitImages('img.ofi');
-
-	/*-------------------------------
 		iPhone/iPad class
 	-------------------------------*/
 	var ua = navigator.userAgent.toLowerCase();
@@ -21,11 +16,9 @@
 	setTimeout(function() {
 		$('body').addClass('js-ready');
 	}, 400);
-
 	$(window).on('load',function(){
 		$('body').addClass('js-loaded');
 	});
-
 	//loading
 	var webStorage = function(){
 		if(sessionStorage.getItem('access')){
@@ -36,16 +29,6 @@
 		}
 	}
 	webStorage();
-
-	// ロード後2.3秒が経ったらonceクラス削除
-	window.addEventListener('load', function(){
-		window.setTimeout(function(){
-			const once = document.querySelector(".once");
-			if (once) {
-				once.classList.remove('once')
-			}
-		}, 2300);
-	});
 
 	/*-------------------------------
 		スクロール判定
@@ -75,20 +58,20 @@
 				var target = $(this.hash);
 				target = target.length ? target : $("[name=' + this.hash.slice(1) + ']");
 
-				if(window.matchMedia( "(max-width: 768px)" ).matches) {
+				if(window.matchMedia( "(max-width: 834px)" ).matches) {
 					// SP
 					if (target.length) {
 						$('html,body').animate({
-							scrollTop: target.offset().top - $headerHeight - 32
-						}, 700);
+							scrollTop: target.offset().top
+						}, 600);
 						return false;
 					}
 				} else {
 					// PC
 					if (target.length) {
 						$('html,body').animate({
-							scrollTop: target.offset().top - 32
-						}, 700);
+							scrollTop: target.offset().top
+						}, 600);
 						return false;
 					}
 				}
@@ -137,19 +120,6 @@
 	}
 
 	/*-------------------------------
-    youtube 遅延読み込み
-  -------------------------------*/
-	function youtube_defer() {
-		var iframes = document.querySelectorAll('.youtube');
-		iframes.forEach(function (iframe) {
-			if (iframe.getAttribute('data-src')) {
-				iframe.setAttribute('src', iframe.getAttribute('data-src'));
-			}
-		});
-	}
-	window.addEventListener('load', youtube_defer);
-
-	/*-------------------------------
 		SPのみ順番入れ替え
 	-------------------------------*/
 	/*** 変数定義 ***/
@@ -196,13 +166,6 @@
 	/*** 初期化処理 ***/
 	listener01(mediaQueryList01);
 	listener02(mediaQueryList02);
-
-	/*-------------------------------
-		pageHeader 有無チェック
-	-------------------------------*/
-	if (!$('.pageHeader').length) {
-		$('body').addClass('nonePageHeader');
-	}
 
 })(jQuery);
 

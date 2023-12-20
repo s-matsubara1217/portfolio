@@ -5,6 +5,311 @@
 // トップページ
 // ==========================================*/
 .front-page {
+
+  // メインビジュアル
+  .mainVisual {
+    position: relative;
+    text-align: center;
+    background-image: url(../../img/index/mv_bg_text.png);
+    background-size: auto;
+    background-repeat: repeat;
+
+    // line yellow
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $primary-color;
+      width: 300px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) skew(-25deg);
+    }
+
+    &__hero {
+      position: relative;
+      display: inline-block;
+      padding-top: 96px;
+      z-index: 2;
+
+      &__human {
+
+      }
+      &__pc {
+        position: absolute;
+        bottom: 16px;
+        right: -100px;
+      }
+    }
+    &__copy {
+      font-size: min(8.33vw, 12rem);
+      line-height: 1;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+
+      &__fill {
+        .eng {
+
+        }
+      }
+      &__border {
+        .eng {
+          color: #fff;
+          -webkit-text-stroke: 1px $txt-color;
+          text-stroke: 1px $txt-color;
+        }
+      }
+    }
+  }
+
+  section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  // About
+  .sec__about {
+    background-color: $txt-color;
+    color: #fff;
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 80px;
+
+    // 背景画像
+    &::before {
+      content: '';
+      display: inline-block;
+      background-image: url(../../img/index/about_bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      filter: blur(3px);
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .about {
+      &__inner {
+
+      }
+      &__head {
+
+      }
+      &__body {
+        margin-top: 40px;
+        .desc {
+          font-size: 1.6rem;
+        }
+      }
+
+      &__commonBtn01 {
+        text-align: right;
+        margin-top: 40px;
+      }
+    }
+  }
+  // Skills
+  .sec__skills {
+    background-image: url(../../img/index/skills_bg.png);
+    background-size: auto;
+    background-repeat: repeat;
+
+    .skills {
+      &__inner {
+
+      }
+      &__head {
+
+      }
+      &__body {
+        margin-top: 56px;
+      }
+
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 50px 5%;
+
+        &__item {
+          flex: 0 0 47.5%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .imgArea {
+            flex: 0 0 120px;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid $txt-color;
+            margin-right: 24px;
+
+            .img {
+
+            }
+          }
+          .txtArea {
+            flex: 1 1 auto;
+            .term {
+              font-family: $eng;
+              font-size: 2rem;
+              line-height: 1;
+              margin-top: 4px;
+            }
+            .desc {
+              line-height: 1.6;
+              margin-top: 12px;
+            }
+          }
+
+          .termArea {
+            flex: 0 0 120px;
+            text-align: center;
+            margin-right: 24px;
+            .term {
+              font-size: 2rem;
+              font-family: $eng;
+              line-height: 1;
+            }
+            .img {
+              width: 120px;
+              height: 120px;
+              background-color: #fff;
+              border: 1px solid $txt-color;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 8px;
+            }
+          }
+          .descArea {
+            .desc {
+
+            }
+          }
+        }
+      }
+    }
+  }
+  // Works
+  .sec__works {
+    position: relative;
+    // line yellow
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $primary-color;
+      width: 300px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-127%) skew(-25deg);
+      @include mq(tab) {
+        transform: translateX(-125%) skew(-25deg);
+      }
+    }
+
+    .works {
+      &__inner {
+
+      }
+      &__head {
+
+      }
+      &__body {
+        margin-top: 56px;
+      }
+
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 50px 5%;
+        flex-wrap: wrap;
+
+        &__item {
+          flex: 0 0 30%;
+
+          a {
+
+          }
+          .imgArea {
+            position: relative;
+
+            .badge {
+              width: 60px;
+              height: 60px;
+              background-color: $primary-color;
+              border: 1px solid $txt-color;
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              border-radius: 50%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: translate(-50%,-50%);
+              z-index: 2;
+              display: none;
+
+              .eng {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                line-height: 1;
+              }
+            }
+            .img {
+              @include keepAspect(66.66667%);
+              &::after {
+                content: '';
+                display: inline-block;
+                border: 1px solid $txt-color;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+          .workStyle {
+            font-size: 1.2rem;
+            border: 1px solid $txt-color;
+            border-radius: 300px;
+            padding: 2px 20px;
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #fff;
+          }
+        }
+      }
+
+      &__commonBtn01 {
+        text-align: right;
+        margin-top: 48px;
+      }
+    }
+  }
+
+
 }
 
 /*--------------------
