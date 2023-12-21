@@ -43,9 +43,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="front-page">
+  <body class="front-page once">
     <!-- ローディング -->
-    <!-- <div id="loading">
+    <div id="loading">
       <div class="loading__inner">
         <div class="loading__txt eng">
           <span>N</span>
@@ -61,19 +61,31 @@
           <span>G</span>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- ハンバーガーメニュー（共通） -->
     <div class="hamburger">
       <div class="hamburger__menu">
         <div class="hamburger__menu__inner">
-          <h1 class="hamburger__commonLogo commonLogo -black">
-            <a href="index.htm" class="ro">
-              <span class="eng">SHO MATSUBARA</span>
-            </a>
-          </h1>
+          <div class="hamburger__menu__wrap">
+            <h1 class="hamburger__commonLogo commonLogo -black">
+              <a href="index.htm" class="ro">
+                <span class="eng">SHO MATSUBARA</span>
+              </a>
+            </h1>
+            <div class="hamburger__commonIcon commonIcon -black">
+              <a href="https://github.com/s-matsubara1217" target="_blank" class="ro">
+                <img src="img/common/icon_github_white.png" alt="GitHub アイコン" height="20" />
+              </a>
+            </div>
+          </div>
           <nav class="hamburger__nav">
             <ul class="hamburger__nav__list">
+              <li class="hamburger__nav__list__item">
+                <a href="index.html" class="ro">
+                  <div class="eng">Top</div>
+                </a>
+              </li>
               <li class="hamburger__nav__list__item">
                 <a href="about.html" class="ro">
                   <div class="eng">About</div>
@@ -119,7 +131,7 @@
               </ul>
             </nav>
             <div class="header__commonIcon commonIcon -black">
-              <a href="https://github.com/s-matsubara1217" target="_blank">
+              <a href="https://github.com/s-matsubara1217" target="_blank" class="ro">
                 <img src="img/common/icon_github_white.png" alt="GitHub アイコン" height="20" />
               </a>
             </div>
@@ -135,6 +147,7 @@
       </header>
       <!-- メインビジュアル -->
       <div class="mainVisual">
+        <div class="mainVisual__commonYellowLine commonYellowLine"></div>
         <div class="mainVisual__hero">
           <div class="mainVisual__hero__human">
             <img src="img/index/mv__hero.png" alt="人物イメージ" height="502" />
@@ -165,9 +178,11 @@
               </div>
               <div class="about__body">
                 <p class="desc">
-                  私の仕事におけるモットーは、Mastery for Service （奉仕のための練達）です。<br />
-                  仕事を通して、一緒に働く方やクライアント、ユーザーなど、多くの方に豊かになっていただきたいと考えております。それを実現するために日々、自身のスキルを磨いております。<br />
-                  また、一緒に働いていて「働きやすい」と思ってもらえるように常日頃から意識しております。
+                  私の仕事におけるモットーは、Mastery for Service （奉仕のための練達）です。<br
+                    class="u-pcOnly"
+                  />仕事を通して、一緒に働く方やクライアント、ユーザーなど、多くの方に豊かになっていただきたいと考えております。それを実現するために日々、自身のスキルを磨いております。<br
+                    class="u-pcOnly"
+                  />また、一緒に働いていて「働きやすい」と思ってもらえるように常日頃から意識しております。
                 </p>
                 <div class="about__commonBtn01 commonBtn01 -white">
                   <a href="about.html">
@@ -386,6 +401,7 @@
         <!-- Works -->
         <section id="SEC_WORKS" class="sec__works">
           <div class="works">
+            <div class="works__commonYellowLine commonYellowLine"></div>
             <div class="works__inner l-container-m">
               <div class="works__head">
                 <div class="commonHead01 -black">
@@ -394,6 +410,7 @@
               </div>
               <div class="works__body">
                 <ul class="works__list">
+                  <!-- [!] SPは最大3件表示 -->
                   <li class="works__list__item">
                     <a href="#">
                       <div class="imgArea">
@@ -579,7 +596,7 @@
       <footer class="footer">
         <div class="footer__inner l-container-xl">
           <span class="pagetop">
-            <a href="#container">
+            <a href="#container" class="ro">
               <img src="img/common/pagetop.png" alt="ページトップ" height="28" />
             </a>
           </span>
@@ -591,7 +608,7 @@
                 </a>
               </div>
               <div class="footer__commonIcon commonIcon -white">
-                <a href="https://github.com/s-matsubara1217" target="_blank">
+                <a href="https://github.com/s-matsubara1217" target="_blank" class="ro">
                   <img src="img/common/icon_github_black.png" alt="GitHub アイコン" height="20" />
                 </a>
               </div>
