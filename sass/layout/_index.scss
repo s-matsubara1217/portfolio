@@ -207,7 +207,9 @@
 
             .img {
               img {
-                transform: scale(0.7);
+                @include mq(sp) {
+                  transform: scale(0.7);
+                }
               }
             }
           }
@@ -405,18 +407,50 @@
     overflow: hidden;
     &__hero {
       opacity: 0;
-      transform: scale(1.1) translateY(-20px);
+      transform: scale(1.1) translateY(-10px);
       // transform: scale(1.2);
       // transform: translateY(40px);
       transition:  opacity 0.4s, transform 0.4s;
-      transition-delay: 0.4s + 0.5s;
+      transition-delay: 2.05s + 0.5s;
     }
     &__copy {
-      opacity: 0;
-      transform: translate(-50%,-20px) scale(1.3);
+      // opacity: 0;
       // transform: translateX(-50%) scale(1.3);
-      transition:  opacity 0.4s, transform 0.4s;
-      transition-delay: 0.4s;
+      // transition:  opacity 0.4s, transform 0.4s;
+      // transition-delay: 0.4s;
+
+      &__fill {
+        .split {
+          > span {
+            display: inline-block;
+            opacity: 0;
+            transform: scale(1.5);
+            transition:  opacity 0.4s, transform 0.4s;
+
+            @for $i from 1 through 18 {
+              &:nth-child(#{$i}) {
+                transition-delay: ($i * 0.05s) + 0.4s;
+              }
+            }
+          }
+        }
+      }
+      &__border {
+        .split {
+          > span {
+            display: inline-block;
+            opacity: 0;
+            transform: scale(1.5);
+            transition:  opacity 0.4s, transform 0.4s;
+
+            @for $i from 1 through 30 {
+              &:nth-child(#{$i}) {
+                transition-delay: ($i * 0.05s) + 1.4s;
+              }
+            }
+          }
+        }
+      }
     }
   }
   &.js-loaded {
@@ -429,8 +463,14 @@
       }
       &__copy {
         opacity: 1;
-        transform: translate(-50%,0) scale(1);
-        // transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1);
+
+        .split {
+          > span {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
       }
     }
   }
