@@ -1,0 +1,377 @@
+@charset "utf-8";
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// Aboutページ
+// ==========================================*/
+.lower-about {
+
+  .l-main {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    // background-color: #f3f3f3;
+    // background-size: auto auto;
+    // background-color: rgba(255, 255, 255, 1);
+    // background-image: repeating-linear-gradient(123deg, transparent, transparent 3px, rgba($txt-color,0.1) 3px, rgba($txt-color,0.1) 6px );
+    @include mq(sp) {
+      padding-top: 40px;
+      padding-bottom: 64px;
+    }
+  }
+
+  // 導入
+  .sec__intro {
+    position: relative;
+    padding-bottom: 80px;
+    @include mq(sp) {
+      padding-bottom: 48px;
+    }
+
+    .intro {
+      &__box {
+        max-width: 950px;
+        margin: 0 auto;
+        position: relative;
+        // 背景色 black
+        &::before {
+          content: '';
+          display: inline-block;
+          background-color: $txt-color;
+          width: 300%;
+          height: calc(50% + 80px);
+          position: absolute;
+          bottom: -80px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include mq(sp) {
+            height: calc(50% + 48px);
+            bottom: -48px;
+          }
+        }
+
+        &__inner {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          background-color: #fff;
+          border: 1px solid $txt-color;
+          padding: 50px 7%;
+          position: relative;
+          @include mq(sp) {
+            display: block;
+            padding: 32px 8%;
+          }
+        }
+
+        .imgArea {
+          margin-right: 7.6%;
+          flex: 0 0 30%;
+          max-width: 240px;
+          @include mq(sp) {
+            width: 75%;
+            max-width: 200px;
+            margin: 0 auto;
+          }
+          .img {
+            @include keepAspect(100%);
+          }
+        }
+        .txtArea {
+          flex: 1 1 auto;
+          align-self: center;
+          @include mq(sp) {
+            margin-top: 24px;
+          }
+          dl {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 1.8rem;
+            margin-top: 4px;
+            @include mq(sp) {
+              font-size: 1.5rem;
+            }
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+          dt {
+            flex: 0 0 80px;
+            font-weight: bold;
+            @include mq(sp) {
+              flex: 0 0 68px;
+            }
+          }
+          dd {
+            margin-left: 12px;
+            @include mq(sp) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 共通セクション（ 職務経歴 / 趣味 / 一問一答 ）
+  .sec__commonSection01 {
+    margin-top: 100px;
+    @include mq(sp) {
+      margin-top: 72px;
+    }
+
+    .commonSection01 {
+      &__box {
+        background-color: #fff;
+        border: 1px solid $txt-color;
+        padding: 80px 6.6% 64px;
+        position: relative;
+        @include mq(sp) {
+          padding: 60px 8% 44px;
+        }
+
+        // ボーダー
+        &::before {
+          content: '';
+          display: inline-block;
+          background-color: #fff;
+          width: 240px;
+          height: 1px;
+          position: absolute;
+          top: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include mq(sp) {
+            width: 180px;
+          }
+        }
+      }
+      &__head {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      &__body {
+
+      }
+    }
+  }
+
+  .careerList {
+    &__item {
+      margin-top: 50px;
+      @include mq(sp) {
+        margin-top: 40px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__head {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba($txt-color,0.2);
+      flex-wrap: wrap;
+      @include mq(sp) {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &__body {
+    }
+
+    &__term {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-right: 20px;
+      @include mq(sp) {
+        font-size: 1.6rem;
+        margin-right: 12px;
+      }
+    }
+    &__job {
+      border: 1px solid $txt-color;
+      border-radius: 300px;
+      padding: 2px 20px;
+      margin-right: 20px;
+      @include mq(sp) {
+        padding: 2px 16px;
+        font-size: 1.2rem;
+        margin-right: 12px;
+      }
+    }
+    &__date {
+      font-size: 1.4rem;
+      color: rgba($txt-color,0.3);
+      @include mq(sp) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__desc {
+
+    }
+  }
+  .hobbyList {
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 50px;
+      @include mq(sp) {
+        display: block;
+        margin-top: 40px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__imgArea {
+      flex: 0 0 29%;
+      max-width: 300px;
+      margin-right: 4%;
+      @include mq(sp) {
+        margin: 0 auto;
+      }
+      .img {
+        @include keepAspect(66.66667%);
+      }
+    }
+    &__txtArea {
+    }
+
+    &__term {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.6;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgb($txt-color,0.2);
+      @include mq(sp) {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 24px;
+        background-color: $primary-color;
+        margin-right: 10px;
+        @include mq(sp) {
+          width: 4px;
+          height: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+    &__desc {
+      margin-top: 8px;
+      @include mq(sp) {
+        margin-top: 12px;
+      }
+    }
+  }
+  .qaList {
+    &__item {
+      margin-top: 40px;
+      @include mq(sp) {
+        margin-top: 36px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__question {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      position: relative;
+      @include mq(sp) {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+      }
+
+      &::before {
+        content: '';
+        background-image: linear-gradient(to right, rgba($txt-color,0.2), rgba($txt-color,0.2) 3px, transparent 3px, transparent 6px);
+        background-size: 6px 1px;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+      }
+
+      &__txt {
+        font-size: 2rem;
+        line-height: 1.6;
+        font-weight: bold;
+        margin-top: 4px;
+        @include mq(sp) {
+          font-size: 1.6rem;
+          margin-top: 2px;
+        }
+      }
+    }
+    &__answer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &__txt {
+        margin-top: 4px;
+        @include mq(sp) {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    &__badge {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 2rem;
+      line-height: 1;
+      margin-right: 20px;
+      flex-shrink: 0;
+      @include mq(sp) {
+        width: 30px;
+        height: 30px;
+        font-size: 1.6rem;
+        margin-right: 12px;
+      }
+
+      &.-yellow {
+        background-color: $primary-color;
+      }
+      &.-black {
+        background-color: $txt-color;
+        color: #fff;
+      }
+    }
+
+
+  }
+
+}

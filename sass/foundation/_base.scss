@@ -68,7 +68,7 @@ body {
 	&::after {
 		content: '';
 		display: inline-block;
-		background-image: url(../../img/index/mv_bg_text.png);
+		background-image: url(../img/common/mv_bg_text.png);
 		background-size: auto;
 		background-repeat: repeat;
 		width: 100%;
@@ -136,6 +136,31 @@ body {
 	}
 	100%{
 		transform: scale(1.2);
+	}
+}
+
+/*--------------------
+	l-main
+--------------------*/
+.l-main {
+	position: relative;
+	// 背景色
+	&::before {
+		content: '';
+		display: inline-block;
+		b　ackground-color: rgba($primary-color,0.05);
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		// transform: skew(-25deg);
+		transform-origin: top right;
+		@include mq(sp) {
+			width: 40%;
+			transform: skew(0);
+		}
 	}
 }
 

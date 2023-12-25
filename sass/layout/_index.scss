@@ -10,7 +10,7 @@
   .mainVisual {
     position: relative;
     text-align: center;
-    background-image: url(../../img/index/mv_bg_text.png);
+    background-image: url(../img/common/mv_bg_text.png);
     background-size: auto;
     background-repeat: repeat;
     @include mq(sp) {
@@ -274,7 +274,7 @@
         }
         @include mq(sp) {
           width: 200px;
-          transform: translateX(-116%) skew(-16deg);
+          transform: translateX(-156%) skew(-25deg);
         }
       }
       &__inner {
@@ -287,102 +287,6 @@
         margin-top: 56px;
         @include mq(sp) {
           margin-top: 40px;
-        }
-      }
-
-      &__list {
-        display: flex;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 50px 5%;
-        flex-wrap: wrap;
-        @include mq(sp) {
-          display: block;
-        }
-
-        &__item {
-          flex: 0 0 30%;
-          max-width: 300px;
-          @include mq(sp) {
-            margin: 0 auto;
-            margin-top: 40px;
-            &:first-child {
-              margin-top: 0;
-            }
-          }
-
-          a {
-            display: block;
-            @include mq(hover) {
-              &:hover {
-                img {
-                  transform: scale(1.05);
-                }
-              }
-            }
-          }
-          .imgArea {
-            position: relative;
-
-            .badge {
-              width: 60px;
-              height: 60px;
-              background-color: $primary-color;
-              border: 1px solid $txt-color;
-              display: flex;
-              justify-content: center;
-              align-content: center;
-              border-radius: 50%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              transform: translate(-50%,-50%);
-              z-index: 2;
-              display: none;
-
-              .eng {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                line-height: 1;
-              }
-            }
-            .img {
-              @include keepAspect(66.66667%);
-              overflow: hidden;
-
-              // ボーダー
-              &::after {
-                content: '';
-                display: inline-block;
-                border: 1px solid $txt-color;
-                width: calc(100% - 2px);
-                height: calc(100% - 2px);
-                position: absolute;
-                top: 0;
-                left: 0;
-              }
-
-              img {
-                transition: transform $transition-time;
-              }
-            }
-          }
-          .workStyle {
-            font-size: 1.2rem;
-            border: 1px solid $txt-color;
-            border-radius: 300px;
-            padding: 2px 20px;
-            margin-top: 10px;
-            display: inline-block;
-            background-color: #fff;
-            @include mq(sp) {
-              font-size: 1.1rem;
-              padding: 2px 16px;
-              margin-top: 8px;
-            }
-          }
         }
       }
 

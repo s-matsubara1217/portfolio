@@ -1,0 +1,56 @@
+@charset "utf-8";
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// Work 一覧
+// ==========================================*/
+.lower-works_l {
+
+  .l-main {
+    padding-top: 68px;
+    padding-bottom: 120px;
+
+    @include mq(sp) {
+      padding-top: 40px;
+      padding-bottom: 64px;
+    }
+  }
+  .works {
+    &__commonWorksList {
+      margin-top: 64px;
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+
+      .commonWorksList__item {
+        @include mq(sp) {
+          margin-top: 32px;
+        }
+      }
+    }
+    &__countPager {
+      &.-top {
+        border-bottom: 1px solid rgba($txt-color,1);
+        padding-bottom: 16px;
+        @include mq(sp) {
+          padding-bottom: 12px;
+        }
+        .pagination {
+          @include mq(sp) {
+            margin-top: 8px;
+          }
+        }
+      }
+      &.-bottom {
+        margin-top: 72px;
+        padding-top: 48px;
+        border-top: 1px solid rgba($txt-color,1);
+        @include mq(sp) {
+          margin-top: 40px;
+          padding-top: 28px;
+        }
+      }
+    }
+  }
+
+}
