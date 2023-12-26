@@ -219,6 +219,24 @@
 			}
 		}
 	}
+
+	&.-reverse {
+		a {
+			padding-right: 0;
+			padding-left: 58px;
+			@include mq(sp) {
+				padding-left: 30px;
+			}
+			@include mq(hover) {
+				&:hover {
+					transform: translateX(-12px);
+				}
+			}
+		}
+		.arrow {
+			transform: scale(-1,1);
+		}
+	}
 }
 
 /*--------------------
@@ -394,20 +412,28 @@
 				}
 			}
 		}
-		.workStyle {
-			font-size: 1.2rem;
-			border: 1px solid $txt-color;
-			border-radius: 300px;
-			padding: 2px 20px;
+		.commonWorkStyle {
 			margin-top: 10px;
-			display: inline-block;
-			background-color: #fff;
 			@include mq(sp) {
-				font-size: 1.1rem;
-				padding: 2px 16px;
 				margin-top: 8px;
 			}
 		}
+	}
+}
+
+/*--------------------
+	commonWorksList
+--------------------*/
+.commonWorkStyle {
+	font-size: 1.2rem;
+	border: 1px solid $txt-color;
+	border-radius: 300px;
+	padding: 2px 20px;
+	display: inline-block;
+	background-color: #fff;
+	@include mq(sp) {
+		font-size: 1.1rem;
+		padding: 2px 16px;
 	}
 }
 

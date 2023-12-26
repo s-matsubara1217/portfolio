@@ -30,7 +30,7 @@
     }
     &__countPager {
       &.-top {
-        border-bottom: 1px solid rgba($txt-color,1);
+        border-bottom: 1px solid #cfcfcf;
         padding-bottom: 16px;
         @include mq(sp) {
           padding-bottom: 12px;
@@ -44,7 +44,7 @@
       &.-bottom {
         margin-top: 72px;
         padding-top: 48px;
-        border-top: 1px solid rgba($txt-color,1);
+        border-top: 1px solid #cfcfcf;
         @include mq(sp) {
           margin-top: 40px;
           padding-top: 28px;
@@ -53,4 +53,205 @@
     }
   }
 
+}
+
+/* ============================================
+// Work 詳細
+// ==========================================*/
+.lower-works_d {
+  background-image: url(../img/common/mv_bg_text.png);
+  background-size: auto;
+  background-repeat: repeat;
+  @include mq(sp) {
+    background-size: contain;
+  }
+
+  .l-main {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    @include mq(sp) {
+      padding-top: 104px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .works {
+    &__commonYellowLine {
+      transform-origin: top right;
+    }
+    &__box {
+      background-color: #fff;
+      padding: 60px 8% 80px;
+      border: 1px solid $txt-color;
+      @include mq(sp) {
+        padding: 32px 8.4% 48px;
+      }
+    }
+    &__head {
+      border-bottom: 1px solid rgba($txt-color, 0.2);
+      padding-bottom: 16px;
+      @include mq(sp) {
+        padding-bottom: 12px;
+      }
+    }
+    &__body {
+      margin-top: 56px;
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+    }
+
+    &__ttlHolder {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+    &__ttl {
+      font-size: 2.8rem;
+      font-weight: bold;
+      line-height: 1.6;
+      @include mq(sp) {
+        font-size: 1.8rem;
+      }
+    }
+    &__commonWorkStyle {
+    }
+    &__url {
+      margin-top: 4px;
+      @include mq(sp) {
+        margin-top: 4px;
+      }
+      a {
+        color: rgba($txt-color, 0.2);
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // word-wrap: break-word;
+        word-break: break-all;
+        line-height: 1.2;
+        @include mq(sp) {
+          font-size: 1rem;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          background-image: url(../../img/common/ico_external_gray.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 16px;
+          margin-top: 2px;
+          margin-left: 4px;
+          @include mq(sp) {
+            transform: scale(0.8);
+            transform-origin: top left;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    &__img {
+      max-width: 720px;
+      margin: 0 auto;
+      a {
+        @include mq(hover) {
+          &:hover {
+            img {
+              transform: scale(1.04)
+            }
+          }
+        }
+      }
+      .img {
+        overflow: hidden;
+        @include keepAspect(66.66667%);
+        &::after {
+          content: "";
+          display: inline-block;
+          border: 1px solid #111111;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        img {
+          transition: transform $transition-time;
+        }
+      }
+    }
+    &__txtArea {
+      margin-top: 48px;
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+
+      dl {
+        margin-top: 40px;
+        @include mq(sp) {
+          margin-top: 24px;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      dt {
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include mq(sp) {
+          font-size: 1.5rem;
+          padding-bottom: 10px;
+        }
+
+        // 黄色ライン
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 5px;
+          height: 20px;
+          background-color: #FFDE30;
+          margin-right: 10px;
+          @include mq(sp) {
+            margin-right: 8px;
+            width: 4px;
+          }
+        }
+        // 破線
+        &::after {
+          content: '';
+          background-image: linear-gradient(to right, rgba($txt-color,0.2), rgba($txt-color,0.2) 3px, transparent 3px, transparent 6px);
+          background-size: 6px 1px;
+          background-position: left bottom;
+          background-repeat: repeat-x;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          pointer-events: none;
+        }
+      }
+      dd {
+        margin-top: 12px;
+        @include mq(sp) {
+          margin-top: 10px;
+        }
+      }
+    }
+    &__commonBtn01 {
+      margin-top: 64px;
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+    }
+  }
 }
