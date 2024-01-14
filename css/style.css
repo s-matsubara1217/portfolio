@@ -5115,7 +5115,7 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
 .front-page .sec__about::before {
   content: "";
   display: inline-block;
-  background-image: url(../../img/index/about_bg.jpg);
+  background-image: url(../img/index/about_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -5156,7 +5156,7 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   }
 }
 .front-page .sec__skills {
-  background-image: url(../../img/index/skills_bg.png);
+  background-image: url(../img/index/skills_bg.png);
   background-size: auto;
   background-repeat: repeat;
 }
@@ -6209,7 +6209,7 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
 .lower-works_d .works__url a::after {
   content: "";
   display: inline-block;
-  background-image: url(../../img/common/ico_external_gray.png);
+  background-image: url(../img/common/ico_external_gray.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 16px;

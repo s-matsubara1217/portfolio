@@ -101,7 +101,7 @@
     &::before {
       content: '';
       display: inline-block;
-      background-image: url(../../img/index/about_bg.jpg);
+      background-image: url(../img/index/about_bg.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
@@ -148,7 +148,7 @@
   }
   // Skills
   .sec__skills {
-    background-image: url(../../img/index/skills_bg.png);
+    background-image: url(../img/index/skills_bg.png);
     background-size: auto;
     background-repeat: repeat;
 
