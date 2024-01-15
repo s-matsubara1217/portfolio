@@ -32,6 +32,4 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet" />
 
-<!-- styles -->
-<!-- 共通 -->
-<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.css" />
+<!-- styles：functions.phpに記入 -->

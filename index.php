@@ -32,7 +32,7 @@
       <div class="hamburger__menu__inner">
         <div class="hamburger__menu__wrap">
           <div class="hamburger__commonLogo commonLogo -black">
-            <a href="/" class="ro">
+            <a href="<?php echo esc_url(home_url()); ?>" class="ro">
               <span class="eng">SHO MATSUBARA</span>
             </a>
           </div>
@@ -45,7 +45,7 @@
         <nav class="hamburger__nav">
           <ul class="hamburger__nav__list">
             <li class="hamburger__nav__list__item">
-              <a href="/" class="ro">
+              <a href="<?php echo esc_url(home_url()); ?>" class="ro">
                 <div class="eng">Top</div>
               </a>
             </li>

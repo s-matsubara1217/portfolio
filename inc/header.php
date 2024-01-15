@@ -2,7 +2,7 @@
 <header class="header">
   <div class="header__inner">
     <div class="header__commonLogo commonLogo -black">
-      <a href="/" class="ro">
+      <a href="<?php echo esc_url(home_url()); ?>" class="ro">
         <span class="eng">SHO MATSUBARA</span>
       </a>
     </div>

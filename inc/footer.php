@@ -9,7 +9,7 @@
     <div class="footer__body">
       <div class="footer__body__left">
         <div class="footer__commonLogo commonLogo -white">
-          <a href="/" class="ro">
+          <a href="<?php echo esc_url(home_url()); ?>" class="ro">
             <span class="eng">SHO MATSUBARA</span>
           </a>
         </div>
