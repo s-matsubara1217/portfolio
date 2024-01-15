@@ -15,7 +15,7 @@
 </script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>SHO MATSUBARA | ポートフォリオサイトaa</title>
+<title>SHO MATSUBARA | ポートフォリオサイト</title>
 
 <meta name="description" content="" />
 <meta name="keywords" content="" />
