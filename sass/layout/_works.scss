@@ -191,15 +191,9 @@
       }
 
       dl {
-        margin-top: 40px;
-        @include mq(sp) {
-          margin-top: 24px;
-        }
-        &:first-child {
-          margin-top: 0;
-        }
+
       }
-      dt {
+      h2 {
         font-size: 1.8rem;
         font-weight: bold;
         position: relative;
@@ -207,9 +201,14 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-top: 40px;
+        &:first-child {
+          margin-top: 0;
+        }
         @include mq(sp) {
           font-size: 1.5rem;
           padding-bottom: 10px;
+          margin-top: 24px;
         }
 
         // 黄色ライン
@@ -240,7 +239,7 @@
           pointer-events: none;
         }
       }
-      dd {
+      p {
         margin-top: 12px;
         @include mq(sp) {
           margin-top: 10px;

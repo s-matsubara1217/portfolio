@@ -98,8 +98,8 @@
 		}
 	}
 	&__nav {
-		&__list{
-			&__item {
+		ul {
+			li {
 				flex: 0 0 50%;
 				font-weight: bold;
 				line-height: 1.6;
@@ -117,6 +117,10 @@
 					transition: opacity 0.3s;
 					height: 100%;
 					padding: 20px;
+					font-family: $eng;
+					font-size: 1.8rem;
+					line-height: 1;
+					transition: color $transition-time, letter-spacing $transition-time;
 
 					&:after {
 						content: "";
@@ -132,11 +136,6 @@
 						transform: rotate(45deg);
 					}
 				}
-        .eng {
-					font-size: 1.8rem;
-					line-height: 1;
-					transition: color $transition-time, letter-spacing $transition-time;
-        }
 			}
 		}
 	}
@@ -195,21 +194,38 @@
 		@include mq(sp) {
       display: none;
 		}
-    &__list {
-      display: flex;
+
+		ul {
+			display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      &__item {
-        position: relative;
+			li {
+				position: relative;
         white-space: nowrap;
         margin-right: 40px;
         &:last-child {
           margin-right: 0;
         }
+			}
+			a {
+				font-weight: bold;
+				font-size: 2rem;
+				font-family: $eng;
+				transition: opacity $transition-time;
+				@include mq(hover) {
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+    &__list {
+
+      &__item {
+
       }
       .eng {
-        font-weight: bold;
-				font-size: 2rem;
+
       }
     }
   }

@@ -21,18 +21,14 @@
       </div>
       <div class="footer__body__right">
         <nav class="footer__nav">
-          <ul class="footer__nav__list">
-            <li class="footer__nav__list__item">
-              <a href="about.html" class="ro">
-                <span class="eng">About</span>
-              </a>
-            </li>
-            <li class="footer__nav__list__item">
-              <a href="works_l.html" class="ro">
-                <span class="eng">Works</span>
-              </a>
-            </li>
-          </ul>
+          <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'place_footer',
+              'container' => false,
+            )
+          )
+          ?>
         </nav>
       </div>
     </div>

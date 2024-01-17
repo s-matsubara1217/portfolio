@@ -8,18 +8,14 @@
     </div>
     <div class="header__links">
       <nav class="header__nav">
-        <ul class="header__nav__list">
-          <li class="header__nav__list__item">
-            <a href="about.html" class="ro">
-              <div class="eng">About</div>
-            </a>
-          </li>
-          <li class="header__nav__list__item">
-            <a href="works_l.html" class="ro">
-              <div class="eng">Works</div>
-            </a>
-          </li>
-        </ul>
+        <?php
+        wp_nav_menu(
+          array(
+            'theme_location' => 'place_global',
+            'container' => false,
+          )
+        )
+        ?>
       </nav>
       <div class="header__commonIcon commonIcon -black">
         <a href="https://github.com/s-matsubara1217" target="_blank" class="ro">
