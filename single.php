@@ -54,12 +54,15 @@
 
 
           <div class="works__commonBtn01 commonBtn01 -reverse anime -slideIn-b-40">
-            <a href="<?php echo get_category_link(1) ?>">
-              <span class="eng">back to list</span>
-              <span class="arrow">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/arrow_black.png" alt="イメージ" loading="lazy" height="16" />
-              </span>
-            </a>
+
+            <?php if (!empty($_SERVER['HTTP_REFERER'])) : ?>
+              <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+                <span class="eng">back to <br>previous page</span>
+                <span class="arrow">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/arrow_black.png" alt="イメージ" loading="lazy" height="16" />
+                </span>
+              </a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

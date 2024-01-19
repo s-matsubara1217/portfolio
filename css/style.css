@@ -6264,4 +6264,14 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   .lower-works_d .works__commonBtn01 {
     margin-top: 32px;
   }
+}
+.lower-works_d .works__commonBtn01 a {
+  line-height: 1.2;
+  padding-bottom: 8px;
+  padding-left: 40px;
+}
+@media all and (max-width: 834px) {
+  .lower-works_d .works__commonBtn01 a {
+    padding-left: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */

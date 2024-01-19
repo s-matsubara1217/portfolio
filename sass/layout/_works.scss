@@ -254,6 +254,15 @@
       @include mq(sp) {
         margin-top: 32px;
       }
+
+      a {
+        line-height: 1.2;
+        padding-bottom: 8px;
+        padding-left: 40px;
+        @include mq(sp) {
+          padding-left: 32px;
+        }
+      }
     }
   }
 }
