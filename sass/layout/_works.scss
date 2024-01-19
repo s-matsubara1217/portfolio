@@ -7,7 +7,7 @@
 .lower-works_l {
 
   .l-main {
-    padding-top: 68px;
+    padding-top: 96px;
     padding-bottom: 120px;
 
     @include mq(sp) {
@@ -17,14 +17,13 @@
   }
   .works {
     &__commonWorksList {
-      margin-top: 64px;
-      @include mq(sp) {
-        margin-top: 32px;
-      }
 
       .commonWorksList__item {
         @include mq(sp) {
           margin-top: 32px;
+          &:first-child {
+            margin-top: 0;
+          }
         }
 
         .badge {

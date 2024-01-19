@@ -26,16 +26,18 @@
           <!-- リスト -->
           <ul class="works__commonWorksList commonWorksList">
             <?php
-            $arg = array(
-              'post_type' => 'post', //postは通常の投稿の場合(省略可)、カスタム投稿の時は投稿タイプのスラッグ名を指定する
-              'posts_per_page' => -1, //表示記事件数(-1で全件表示)
-              'orderby' => 'date', //並び順
-              'order' => 'DESC' //降順(日付の新しい順)
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 18,
+              'paged' => $paged,
+              'ignore_sticky_posts' => 1,
             );
-            $posts = new WP_Query($arg);
+            $the_query = new WP_Query($args);
             ?>
-            <?php if ($posts->have_posts()) :
-              while ($posts->have_posts()) : $posts->the_post(); ?>
+            <?php if ($the_query->have_posts()) : ?>
+              <?php while ($the_query->have_posts()) : ?>
+                <?php $the_query->the_post(); ?>
                 <li class="commonWorksList__item anime -slideIn-b-40">
                   <a href="<?php the_permalink(); ?>">
                     <div class="imgArea">
@@ -53,12 +55,28 @@
                     <span class="commonWorkStyle"><?php the_field('workstyle') ?></span>
                   </a>
                 </li>
-              <?php endwhile;
-              wp_reset_query();
-            else : ?>
-              <p>記事がありません</p>
+              <?php endwhile; ?>
             <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
           </ul>
+
+          <!-- ページャー ボトム -->
+          <div class="works__countPager countPager -bottom anime -slideIn-b-40">
+            <div class="pagination -large">
+              <?php
+              if ($the_query->max_num_pages > 1) {
+                echo paginate_links(array(
+                  'base' => get_pagenum_link() .  '%_%',
+                  'format' => 'page/%#%/',
+                  'current' => $paged,
+                  'total' => $the_query->max_num_pages,
+                  'prev_text' => '&lt;',
+                  'next_text' => '&gt;'
+                ));
+              }
+              ?>
+            </div>
+          </div>
         </div>
       </div>
     </main>
