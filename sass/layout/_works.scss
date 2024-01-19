@@ -26,6 +26,10 @@
         @include mq(sp) {
           margin-top: 32px;
         }
+
+        .badge {
+          display: none;
+        }
       }
     }
     &__countPager {

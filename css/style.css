@@ -4298,7 +4298,6 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
-  display: none;
 }
 .commonWorksList__item .imgArea .badge .eng {
   display: -webkit-box;
@@ -6089,6 +6088,9 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   .lower-works_l .works__commonWorksList .commonWorksList__item {
     margin-top: 32px;
   }
+}
+.lower-works_l .works__commonWorksList .commonWorksList__item .badge {
+  display: none;
 }
 .lower-works_l .works__countPager.-top {
   border-bottom: 1px solid #cfcfcf;
