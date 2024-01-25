@@ -43,7 +43,7 @@
       </div>
       <h1 class="mainVisual__copy">
         <div class="mainVisual__copy__fill">
-          <span class="eng split">Mark-up Engineer</span>
+          <span class="eng split">Front-end Engineer</span>
         </div>
         <div class="mainVisual__copy__border">
           <span class="eng split">SHO MATSUBARA</span>
