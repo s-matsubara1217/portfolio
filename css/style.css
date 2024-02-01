@@ -5028,12 +5028,13 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   font-size: min(8.33vw, 12rem);
   line-height: 1;
   position: absolute;
-  top: 120px;
+  top: 180px;
   left: 50%;
   white-space: nowrap;
 }
 @media all and (max-width: 834px) {
   .front-page .mainVisual__copy {
+    top: 130px;
     font-size: min(9vw, 5rem);
   }
 }
@@ -5305,8 +5306,8 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   transition: opacity 0.4s, -webkit-transform 0.4s;
   transition: opacity 0.4s, transform 0.4s;
   transition: opacity 0.4s, transform 0.4s, -webkit-transform 0.4s;
-  -webkit-transition-delay: 2.55s;
-          transition-delay: 2.55s;
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
 }
 .front-page .mainVisual__copy__fill .split > span {
   display: inline-block;
@@ -5369,26 +5370,6 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
 .front-page .mainVisual__copy__fill .split > span:nth-child(13) {
   -webkit-transition-delay: 1.05s;
           transition-delay: 1.05s;
-}
-.front-page .mainVisual__copy__fill .split > span:nth-child(14) {
-  -webkit-transition-delay: 1.1s;
-          transition-delay: 1.1s;
-}
-.front-page .mainVisual__copy__fill .split > span:nth-child(15) {
-  -webkit-transition-delay: 1.15s;
-          transition-delay: 1.15s;
-}
-.front-page .mainVisual__copy__fill .split > span:nth-child(16) {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
-}
-.front-page .mainVisual__copy__fill .split > span:nth-child(17) {
-  -webkit-transition-delay: 1.25s;
-          transition-delay: 1.25s;
-}
-.front-page .mainVisual__copy__fill .split > span:nth-child(18) {
-  -webkit-transition-delay: 1.3s;
-          transition-delay: 1.3s;
 }
 .front-page .mainVisual__copy__border .split > span {
   display: inline-block;

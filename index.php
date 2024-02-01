@@ -42,10 +42,13 @@
         </div>
       </div>
       <h1 class="mainVisual__copy">
-        <div class="mainVisual__copy__fill">
+        <!-- <div class="mainVisual__copy__fill">
           <span class="eng split">Front-end Engineer</span>
-        </div>
-        <div class="mainVisual__copy__border">
+        </div> -->
+        <!-- <div class="mainVisual__copy__border">
+          <span class="eng split">SHO MATSUBARA</span>
+        </div> -->
+        <div class="mainVisual__copy__fill">
           <span class="eng split">SHO MATSUBARA</span>
         </div>
       </h1>
