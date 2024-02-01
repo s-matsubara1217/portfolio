@@ -52,7 +52,10 @@
                         <?php endif; ?>
                       </div>
                     </div>
-                    <span class="commonWorkStyle"><?php the_field('workstyle') ?></span>
+                    <div class="styleHolder">
+                      <span class="commonWorkStyle"><?php the_field('workstyle') ?></span>
+                      <span class="commonJobStyle"><?php the_field('job') ?></span>
+                    </div>
                   </a>
                 </li>
               <?php endwhile; ?>

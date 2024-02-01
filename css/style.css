@@ -4344,18 +4344,32 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  -o-object-position: top;
+     object-position: top;
 }
-.commonWorksList__item .commonWorkStyle {
-  margin-top: 10px;
+.commonWorksList__item .styleHolder {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px 8px;
 }
 @media all and (max-width: 834px) {
-  .commonWorksList__item .commonWorkStyle {
+  .commonWorksList__item .styleHolder {
     margin-top: 8px;
   }
 }
 
 /*--------------------
-	commonWorksList
+	commonWorkStyle
 --------------------*/
 .commonWorkStyle {
   font-size: 1.2rem;
@@ -4367,6 +4381,24 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
 }
 @media all and (max-width: 834px) {
   .commonWorkStyle {
+    font-size: 1.1rem;
+    padding: 2px 16px;
+  }
+}
+
+/*--------------------
+	commonJobStyle
+--------------------*/
+.commonJobStyle {
+  font-size: 1.2rem;
+  border: 1px solid #111111;
+  border-radius: 300px;
+  padding: 2px 20px;
+  display: inline-block;
+  background-color: #fff;
+}
+@media all and (max-width: 834px) {
+  .commonJobStyle {
     font-size: 1.1rem;
     padding: 2px 16px;
   }
@@ -6187,6 +6219,8 @@ input[type=button], input[type=text], input[type=submit], input[type=image], inp
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  -o-object-position: top;
+     object-position: top;
 }
 .lower-works_d .works__txtArea {
   margin-top: 48px;

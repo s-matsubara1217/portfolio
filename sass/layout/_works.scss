@@ -184,6 +184,7 @@
 
         img {
           transition: transform $transition-time;
+          object-position: top;
         }
       }
     }

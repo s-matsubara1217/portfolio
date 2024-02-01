@@ -409,11 +409,17 @@
 
 				img {
 					transition: transform $transition-time;
+					object-position: top;
 				}
 			}
 		}
-		.commonWorkStyle {
-			margin-top: 10px;
+		.styleHolder {
+			margin-top: 12px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 8px 8px;
 			@include mq(sp) {
 				margin-top: 8px;
 			}
@@ -422,9 +428,25 @@
 }
 
 /*--------------------
-	commonWorksList
+	commonWorkStyle
 --------------------*/
 .commonWorkStyle {
+	font-size: 1.2rem;
+	border: 1px solid $txt-color;
+	border-radius: 300px;
+	padding: 2px 20px;
+	display: inline-block;
+	background-color: #fff;
+	@include mq(sp) {
+		font-size: 1.1rem;
+		padding: 2px 16px;
+	}
+}
+
+/*--------------------
+	commonJobStyle
+--------------------*/
+.commonJobStyle {
 	font-size: 1.2rem;
 	border: 1px solid $txt-color;
 	border-radius: 300px;

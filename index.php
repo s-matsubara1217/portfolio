@@ -254,7 +254,7 @@
                     'post_type' => 'post',
                     'post__in' => $sticky,
                     'posts_per_page' => $post_cnt, //最大投稿数を表示させたい記事数にする
-                    'ignore_sticky_posts' => 1, //これも合わせて指定しないと'posts_per_page'が効かない
+                    'ignore_sticky_posts' => 1, //これも合わせて指定しない  と'posts_per_page'が効かない
                   );
                   $the_query = new WP_Query($args);
                   while ($the_query->have_posts()) : $the_query->the_post();
@@ -273,7 +273,10 @@
                             <?php endif; ?>
                           </div>
                         </div>
-                        <span class="commonWorkStyle"><?php the_field('workstyle') ?></span>
+                        <div class="styleHolder">
+                          <span class="commonWorkStyle"><?php the_field('workstyle') ?></span>
+                          <span class="commonJobStyle"><?php the_field('job') ?></span>
+                        </div>
                       </a>
                     </li>
                   <?php
