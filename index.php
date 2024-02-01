@@ -192,7 +192,7 @@
                   <div class="txtArea">
                     <p class="term">React</p>
                     <p class="desc">
-                      現在、書籍やUdemyで勉強中です。
+                      書籍やUdemyで一通りの内容を学習しました。今後さらに理解を深めるために勉強中です。
                     </p>
                   </div>
                 </li>
