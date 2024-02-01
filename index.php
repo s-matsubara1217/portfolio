@@ -192,7 +192,7 @@
                   <div class="txtArea">
                     <p class="term">React</p>
                     <p class="desc">
-                      今後、大規模なWebサービスや、スマホアプリの開発に携わりたいため、現在勉強中です。
+                      現在、書籍やUdemyで勉強中です。
                     </p>
                   </div>
                 </li>
